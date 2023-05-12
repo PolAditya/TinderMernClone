@@ -7,7 +7,7 @@ import Cors from 'cors'
 
 // app config
 const app = express();
-const port = process.env.PORT || 8001
+const port = process.env.PORT || 8002
 
 const connection_url = `mongodb+srv://userTwo:ShDZrRUbrHBJVkNO@cluster0.uiv1grr.mongodb.net/TINDER-CLONE?retryWrites=true&w=majority`;
 
@@ -21,7 +21,7 @@ app.use(Cors());
 mongoose.connect(connection_url, { })
 
 // API endpoints
-app.get("/", (req, res) => res.status(200).send("HELLO WORLD !!"));
+app.get("/", (req, res) => res.status(200).send("HELLO WORLD !!!"));
 
 app.post('/tinder/cards', async (req, res) => {
     const dbCard = req.body;
